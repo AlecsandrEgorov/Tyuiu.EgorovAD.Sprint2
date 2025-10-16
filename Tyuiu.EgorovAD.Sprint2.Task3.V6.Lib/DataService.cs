@@ -6,9 +6,11 @@ namespace Tyuiu.EgorovAD.Sprint2.Task3.V6.Lib
         public double Calculate(double x)
         {
             double y = 0;
+            double g = 0;
             if (x > 0)
             {
-                y = x + Math.Pow(((x - 15) / x - 10), x - 3);
+                g = (x - 15) / (x - 10);
+                y = x + Math.Pow(g, x - 3);
 
             }
             else if (x == 0)

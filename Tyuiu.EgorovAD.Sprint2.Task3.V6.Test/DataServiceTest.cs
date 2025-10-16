@@ -19,9 +19,9 @@ namespace Tyuiu.EgorovAD.Sprint2.Task3.V6.Test
         public void ValidCondition2()
         {
             DataService ds = new DataService();
-            double x = 3;
+            double x = 5;
             double res = ds.Calculate(x);
-            double wait = 4;
+            double wait = 9;
             Assert.AreEqual(wait, res);
 
         }
