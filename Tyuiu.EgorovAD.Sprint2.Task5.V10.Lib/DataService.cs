@@ -98,6 +98,14 @@ namespace Tyuiu.EgorovAD.Sprint2.Task5.V10.Lib
             {
                 res = $"{day}.0{month}.{year}";
             }
+            if (day >= 10)
+            {
+                res = $"{day}.{month}.{year}";
+            }
+            else
+            {
+                res = $"{day}.0{month}.{year}";
+            }
 
             return res; 
         }
