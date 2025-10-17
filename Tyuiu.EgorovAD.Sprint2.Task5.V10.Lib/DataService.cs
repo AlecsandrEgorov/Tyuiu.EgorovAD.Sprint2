@@ -10,9 +10,9 @@ namespace Tyuiu.EgorovAD.Sprint2.Task5.V10.Lib
             int year;
             string res;
 
-            if (g < 1 || m < 1 || m > 12 || n < 1 || n > 31)
+            if (m < 1 || m > 12 || n < 1 || n > 31)
             {
-                throw new ArgumentException($"Неправильно указан год, месяц или день");
+                throw new ArgumentException("Неправильно указан год, месяц или день");
             }
 
             if (n > 1)
@@ -20,7 +20,6 @@ namespace Tyuiu.EgorovAD.Sprint2.Task5.V10.Lib
                 day = n - 1;
                 month = m;
                 year = g;
-                res = $"{day}.{month}.{year}";
             }
             else
             {
@@ -37,7 +36,7 @@ namespace Tyuiu.EgorovAD.Sprint2.Task5.V10.Lib
                         year = g;
                         break;
                     case 3:
-                        day = 28; 
+                        day = 28;
                         month = 2;
                         year = g;
                         break;
@@ -87,9 +86,17 @@ namespace Tyuiu.EgorovAD.Sprint2.Task5.V10.Lib
                         year = g;
                         break;
                     default:
-                        throw new ArgumentException($"Неправильно указан год, месяц или день");
+                        throw new ArgumentException("Неправильно указан год, месяц или день");
                 }
+            }
+
+            if (month >= 10)
+            {
                 res = $"{day}.{month}.{year}";
+            }
+            else
+            {
+                res = $"{day}.0{month}.{year}";
             }
 
             return res; 
