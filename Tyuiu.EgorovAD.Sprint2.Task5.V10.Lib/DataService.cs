@@ -90,24 +90,24 @@ namespace Tyuiu.EgorovAD.Sprint2.Task5.V10.Lib
                 }
             }
 
-            if (month >= 10)
+            if ((month >= 10) && (day >= 10))
             {
                 res = $"{day}.{month}.{year}";
             }
-            else
+            else if ((month >= 10) && (day < 10))
+            {
+                res = $"0{day}.{month}.{year}";
+            }
+            else if ((month < 10) && (day >= 10))
             {
                 res = $"{day}.0{month}.{year}";
             }
-            if (day >= 10)
-            {
-                res = $"{day}.{month}.{year}";
-            }
             else
             {
-                res = $"{day}.0{month}.{year}";
+                res = $"0{day}.0{month}.{year}";
             }
 
-            return res; 
+                return res; 
         }
     }
     
